@@ -1,45 +1,9 @@
 # job4j_tracker
 
 ## О проекте
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
-job4j
+1. Инструменты
+1. Подключение библиотеки AssertJ
+1. Утверждения с примитивными типами
+1. Утверждения с исключениями
+1. Утверждения с коллекциями
+1. Отладчик в IDEA
