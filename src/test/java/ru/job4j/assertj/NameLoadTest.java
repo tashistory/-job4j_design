@@ -23,7 +23,7 @@ class NameLoadTest {
     void checkAbsenceSimbol() {
         NameLoad nameLoad = new NameLoad();
         String name = "key:value";
-        assertThatThrownBy( () -> nameLoad.parse(name))
+        assertThatThrownBy(() -> nameLoad.parse(name))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(name)
                 .hasMessageContaining("=")
@@ -34,7 +34,7 @@ class NameLoadTest {
     void checkAbsenceKey() {
         NameLoad nameLoad = new NameLoad();
         String name = "=value";
-        assertThatThrownBy( () -> nameLoad.parse(name))
+        assertThatThrownBy(() -> nameLoad.parse(name))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(name)
                 .hasMessageContaining("=value");
@@ -44,7 +44,7 @@ class NameLoadTest {
     void checkAbsenceValue() {
         NameLoad nameLoad = new NameLoad();
         String name = "key=";
-        assertThatThrownBy( () -> nameLoad.parse(name))
+        assertThatThrownBy(() -> nameLoad.parse(name))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(name)
                 .hasMessageContaining("key=");
