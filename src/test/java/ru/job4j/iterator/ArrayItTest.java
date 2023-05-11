@@ -33,8 +33,8 @@ class ArrayItTest {
 
 
     @Test
-    public void whenNextFromEmpty()
-    {ArrayIt it = new ArrayIt(
+    public void whenNextFromEmpty() {
+        ArrayIt it = new ArrayIt(
             new int[] {}
     );
        assertThrows(NoSuchElementException.class, it::next);
