@@ -22,8 +22,7 @@ public class SimpleArrayList<T> implements SimpleList<T> {
         if (size == container.length || size == 0) {
             container = grow();
         }
-        container[size] = value;
-        size++;
+        container[size++] = value;
         modCount++;
     }
 
