@@ -12,20 +12,16 @@ public class SimpleQueue<T> {
         if (countIn == 0 && countOut == 0) {
             throw new NoSuchElementException("Queue is empty");
         }
-        if (countOut != 0) {
-            countOut--;
-            return out.pop();
+        if (countOut == 0) {
+            while (countIn > 0) {
+                out.push(in.pop());
+                countOut++;
+                countIn--;
+            }
         }
-
-        while (countOut != countIn - 1) {
-            out.push(in.pop());
-            countOut++;
-        }
-        T result = in.pop();
-        countIn = 0;
-        return result;
+        countOut--;
+        return out.pop();
     }
-
 
     public void push(T value) {
         in.push(value);
