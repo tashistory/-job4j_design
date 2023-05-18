@@ -12,18 +12,18 @@ public class SimpleQueue<T> {
         if (countIn == 0) {
             throw new NoSuchElementException("Queue is empty");
         }
-        while (countOut != countIn - 1) {
-            out.push(in.pop());
-            countOut++;
-        }
-        T result = in.pop();
-        countIn = 0;
-        while (countOut != 0) {
-            in.push(out.pop());
+        if (countOut != 0) {
             countOut--;
-            countIn++;
+            return out.pop();
+        } else {
+            while (countOut != countIn - 1) {
+                out.push(in.pop());
+                countOut++;
+            }
+            T result = in.pop();
+            countIn = 0;
+            return result;
         }
-        return result;
     }
 
     public void push(T value) {
