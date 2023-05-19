@@ -51,4 +51,11 @@ class ListUtilsTest {
         ListUtils.removeAll(input, new ArrayList<>(Arrays.asList(2, 4, 5)));
         assertThat(input).hasSize(2).containsSequence(1, 3);
     }
+
+    @Test
+    void whenAddAfterEnd() {
+        List<Integer> input = new ArrayList<>(Arrays.asList(1, 3));
+        ListUtils.addAfter(input, 1, 2);
+        assertThat(input).hasSize(3).containsSequence(1, 3, 2);
+    }
 }
