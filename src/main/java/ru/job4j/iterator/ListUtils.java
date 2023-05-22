@@ -22,7 +22,6 @@ public class ListUtils {
                 iterator.remove();
             }
         }
-
     }
 
     public static <T> void replaceIf(List<T> list, Predicate<T> filter, T value) {
@@ -32,11 +31,9 @@ public class ListUtils {
                 iterator.set(value);
             }
         }
-
     }
 
     public static <T> void removeAll(List<T> list, List<T> elements) {
         removeIf(list, elements::contains);
     }
-
 }
