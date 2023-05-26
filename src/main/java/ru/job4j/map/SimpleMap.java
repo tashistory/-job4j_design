@@ -19,7 +19,7 @@ public class SimpleMap<K, V> implements Map<K, V> {
 
     @Override
     public boolean put(K key, V value) {
-        if ((float) count / capacity >= LOAD_FACTOR) {
+        if (capacity * LOAD_FACTOR <= count) {
             expand();
         }
         int index = genIndex(key);
@@ -41,7 +41,7 @@ public class SimpleMap<K, V> implements Map<K, V> {
     }
 
     private int genIndex(K key) {
-        return Objects.nonNull(key) ? indexFor(hash(key.hashCode())) : 0;
+        return indexFor(hash(Objects.hashCode(key)));
     }
 
     private void expand() {
@@ -55,24 +55,32 @@ public class SimpleMap<K, V> implements Map<K, V> {
         table = extendTable;
     }
 
+    private boolean compareKey(K key) {
+        boolean rslt = false;
+        int index = genIndex(key);
+        int hashKey = hash(Objects.hashCode(key));
+        if (table[index] != null) {
+            int hashElem = hash(Objects.hashCode(table[index].key));
+            rslt = hashKey == hashElem && Objects.equals(key, table[index].key);
+
+        }
+        return rslt;
+    }
+
     @Override
     public V get(K key) {
+        V rslt = null;
         int index = genIndex(key);
-        return ((table[index] != null)
-                && ((table[index].key != null
-                && table[index].key.equals(key))
-                || (table[index].key == null
-                && table[index].key == key)))
-                ? table[index].value : null;
+        if (compareKey(key)) {
+            rslt = table[index].value;
+        }
+        return rslt;
     }
 
     @Override
     public boolean remove(K key) {
         int index = genIndex(key);
-        boolean rsl = table[index] != null
-                && (table[index].key == null
-                || (table[index].key != null
-                && table[index].key.equals(key)));
+        boolean rsl = compareKey(key);
         if (rsl) {
             table[index].value = null;
             table[index].key = null;
@@ -96,16 +104,10 @@ public class SimpleMap<K, V> implements Map<K, V> {
                     throw new ConcurrentModificationException();
                 }
                 boolean rsl = false;
-                while (point < table.length) {
-                    if (table[point] == null) {
-                        point++;
-                    } else {
-                        return true;
-                    }
+                while (point < table.length && table[point] == null) {
+                    point++;
                 }
-                return rsl;
-               /* return point < count;
-                return point < table.length; */
+                return point < table.length;
             }
 
             @Override
