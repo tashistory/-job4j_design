@@ -19,13 +19,11 @@ public class SimpleMap<K, V> implements Map<K, V> {
 
     @Override
     public boolean put(K key, V value) {
-        int index = genIndex(key);
-        System.out.println("---" + table.length);
-        System.out.println(index);
-        boolean rsl = table[index] == null;
-        if (count / capacity >= LOAD_FACTOR) {
+        if ((float) count / capacity >= LOAD_FACTOR) {
             expand();
         }
+        int index = genIndex(key);
+        boolean rsl = table[index] == null;
         if (rsl) {
             table[index] = new MapEntry<>(key, value);
             modCount++;
@@ -39,11 +37,13 @@ public class SimpleMap<K, V> implements Map<K, V> {
     }
 
     private int indexFor(int hash) {
-        return hash & (table.length - 1);
+        return hash & (capacity - 1);
     }
+
     private int genIndex(K key) {
-        return key == null ? 0 : indexFor(hash(key.hashCode()));
+        return Objects.nonNull(key) ? indexFor(hash(key.hashCode())) : 0;
     }
+
     private void expand() {
         capacity *= 2;
         MapEntry<K, V>[] extendTable = new MapEntry[capacity];
@@ -58,26 +58,18 @@ public class SimpleMap<K, V> implements Map<K, V> {
     @Override
     public V get(K key) {
         int index = genIndex(key);
-         if (table[index]  == null) {
-              return null;
-          }
-          if (table[index].key != null && table[index].key.equals(key)) {
-              return table[index].value;
-          }
-          if (table[index].key == null && table[index].value != null) {
-              return table[index].value;
-          }
-          return null;
-        //return table[index].key != null && table[index].key.equals(key) ? table[index].value : null;
-             /* return table[index]  != null
-                && (table[index].key == null || (table[index].key != null
-                || table[index].key.equals(key))) ? table[index].value : null; */
+        return ((table[index] != null)
+                && ((table[index].key != null
+                && table[index].key.equals(key))
+                || (table[index].key == null
+                && table[index].key == key)))
+                ? table[index].value : null;
     }
 
     @Override
     public boolean remove(K key) {
         int index = genIndex(key);
-        boolean rsl = table[index]  != null
+        boolean rsl = table[index] != null
                 && (table[index].key == null
                 || (table[index].key != null
                 && table[index].key.equals(key)));
@@ -93,8 +85,9 @@ public class SimpleMap<K, V> implements Map<K, V> {
 
     @Override
     public Iterator<K> iterator() {
-        final int expectedModCount = modCount;
+
         return new Iterator<K>() {
+            final int expectedModCount = modCount;
             private int point = 0;
 
             @Override
@@ -103,15 +96,16 @@ public class SimpleMap<K, V> implements Map<K, V> {
                     throw new ConcurrentModificationException();
                 }
                 boolean rsl = false;
-                    while (point < count + 2) {
-                        if (table[point] == null) {
-                            point++;
-                        } else {
-                            return true;
-                        }
+                while (point < table.length) {
+                    if (table[point] == null) {
+                        point++;
+                    } else {
+                        return true;
                     }
-
+                }
                 return rsl;
+               /* return point < count;
+                return point < table.length; */
             }
 
             @Override
@@ -119,10 +113,7 @@ public class SimpleMap<K, V> implements Map<K, V> {
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
-                //System.out.println(table[point].key);
-               K rsl =  table[point].key;
-               point++;
-               return rsl;
+                return table[point++].key;
             }
         };
     }
@@ -136,19 +127,5 @@ public class SimpleMap<K, V> implements Map<K, V> {
             this.key = key;
             this.value = value;
         }
-    }
-
-    public static void main(String[] args) {
-        SimpleMap<Integer, String> map = new SimpleMap<>();
-        map.put(1, "1");
-        map.put(2, "2");
-        map.put(3, "3");
-        map.put(4, "4");
-        map.put(16, "16");
-        //
-       // map.put(0, "0");
-        map.put(null, "0000");
-        System.out.println("---------");
-        System.out.println(map.get(16));
     }
 }
