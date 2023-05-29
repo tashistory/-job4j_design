@@ -103,7 +103,6 @@ public class SimpleMap<K, V> implements Map<K, V> {
                 if (expectedModCount != modCount) {
                     throw new ConcurrentModificationException();
                 }
-                boolean rsl = false;
                 while (point < table.length && table[point] == null) {
                     point++;
                 }

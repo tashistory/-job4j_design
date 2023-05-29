@@ -149,5 +149,17 @@ class SimpleMapTest {
         SimpleMap<Integer, String> map = new SimpleMap<>();
         assertThat(map.put(0, "0")).isTrue();
         assertThat(map.get(null)).isNull();
+    }    @Test
+    void whenCheckGetNull() {
+        SimpleMap<Integer, String> map = new SimpleMap<>();
+        assertThat(map.put(null, null)).isTrue();
+        assertThat(map.get(null)).isNull();
+    }
+
+    @Test
+    void whenCheckGetNullFromZero() {
+        SimpleMap<Integer, String> map = new SimpleMap<>();
+        assertThat(map.put(0, null)).isTrue();
+        assertThat(map.get(null)).isNull();
     }
 }
