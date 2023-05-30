@@ -1,7 +1,6 @@
 package ru.job4j.question;
 
 import java.util.*;
-
 public class Analize {
 
 
@@ -9,16 +8,17 @@ public class Analize {
 
         int added = 0;
         int changed = 0;
-        int id;
+        boolean contains;
         Map<Integer, User> map =  new HashMap<>();
         previous.forEach(user -> map.put(user.getId(), user));
 
+
         for (User user : current) {
-            id = user.getId();
-            if (!map.containsKey(id)) {
+            contains = map.containsKey(user.getId());
+            if (!contains) {
                 added++;
             }
-            if (!map.containsValue(user) && map.containsKey(id)) {
+            if (!map.containsValue(user) && contains) {
                 changed++;
             }
             map.remove(user.getId());
