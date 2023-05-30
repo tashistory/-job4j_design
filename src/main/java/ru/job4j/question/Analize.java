@@ -4,15 +4,18 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Analize {
-    static int added = 0;
-    static int changed = 0;
+
 
     public static Info diff(Set<User> previous, Set<User> current) {
+
+        int added = 0;
+        int changed = 0;
         Map<Integer, User> map = previous.stream()
                 .collect(Collectors.toMap(User::getId, user -> user,
                         (existing, replacement) -> existing));
 
-        current.forEach(user -> {
+
+        for (User user : current) {
             if (!map.containsKey(user.getId())) {
                 added++;
             }
@@ -20,10 +23,7 @@ public class Analize {
                 changed++;
             }
             map.remove(user.getId());
-        });
-        Info rsl = new Info(added, changed, map.size());
-        added = 0;
-        changed = 0;
-        return rsl;
+        }
+        return new Info(added, changed, map.size());
     }
 }
