@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 public class Analize {
     static long added;
     static long changed;
-    static long deleted;
 
     public static Info diff(Set<User> previous, Set<User> current) {
         Map<Integer, User> map = previous.stream()
