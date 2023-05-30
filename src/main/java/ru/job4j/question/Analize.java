@@ -1,7 +1,6 @@
 package ru.job4j.question;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Analize {
 
@@ -10,16 +9,16 @@ public class Analize {
 
         int added = 0;
         int changed = 0;
-        Map<Integer, User> map = previous.stream()
-                .collect(Collectors.toMap(User::getId, user -> user,
-                        (existing, replacement) -> existing));
-
+        int id;
+        Map<Integer, User> map =  new HashMap<>();
+        previous.forEach(user -> map.put(user.getId(), user));
 
         for (User user : current) {
-            if (!map.containsKey(user.getId())) {
+            id = user.getId();
+            if (!map.containsKey(id)) {
                 added++;
             }
-            if (!map.containsValue(user) && map.containsKey(user.getId())) {
+            if (!map.containsValue(user) && map.containsKey(id)) {
                 changed++;
             }
             map.remove(user.getId());
