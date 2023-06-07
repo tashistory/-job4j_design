@@ -10,11 +10,12 @@ public class LogFilter {
     public List<String> filter(String file) {
         List<String> rslt = new ArrayList<>();
         try (BufferedReader in = new BufferedReader(new FileReader(file))) {
-            in.lines().forEach(el -> {
-                        if (el.contains("404 ")) {
-                            rslt.add(el);
-                        }
-            });
+            for (String line = in.readLine(); line != null; line = in.readLine()) {
+               String[] lineArr = line.split(" ");
+               if (lineArr[lineArr.length - 2].equals("404")) {
+                   rslt.add(line);
+               }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
