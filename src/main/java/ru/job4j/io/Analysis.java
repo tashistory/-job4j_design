@@ -1,25 +1,34 @@
 package ru.job4j.io;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringJoiner;
+import java.util.*;
 
 public class Analysis {
     public void unavailable(String source, String target) {
-        boolean condition;
-        int conditionprev = 500;
-        // StringJoiner out = new StringJoiner(System.lineSeparator());
-        try (BufferedReader read = new BufferedReader(new FileReader(source))) {
-            for (String line = read.readLine(); line != null; line = read.readLine()) {
-             /*  if ((line.startsWith("400") || line.startsWith("500")) && ){
-                   condition = true;
-               }*/
-                System.out.println(line + " " + (line.startsWith("400") || line.startsWith("500")));
 
-                //String[] lineArr = line.split(" ");
-                //condition = line.startsWith("400") || line.startsWith("500");
+        StringJoiner out = new StringJoiner("");
+        List<String>  arr = new ArrayList<>();
+        try (BufferedReader read = new BufferedReader(new FileReader(source))) {
+            read.lines().forEach(arr::add);
+            int k = 0;
+            for (int i = 0; i < arr.size() - 1; i++) {
+               if (arr.get(i).contains("400") ||  arr.get(i).contains("500")) {
+                   k++;
+                   if (k == 1) {
+                       out.add(arr.get(i).split(" ")[1]);
+                   }
+                   if (arr.get(i + 1).contains("200") ||  arr.get(i + 1).contains("300")) {
+                       out.add(";" + arr.get(i + 1).split(" ")[1] + ";" + System.lineSeparator());
+                       k = 0;
+                   }
+               }
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try (FileOutputStream tar = new FileOutputStream(target)) {
+            tar.write(out.toString().getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
