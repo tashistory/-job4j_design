@@ -19,14 +19,21 @@ public class Config {
     public void load() {
         StringJoiner out = new StringJoiner(System.lineSeparator());
         try (BufferedReader read = new BufferedReader(new FileReader(this.path))) {
-            // read.lines().forEach(out::add);
             for (String line = read.readLine(); line != null; line = read.readLine()) {
-                if (!line.isEmpty() && line.charAt(0) != '#') {
+                if (!line.isEmpty() && !line.startsWith("#")) {
                     String[] lineArr = line.split("=");
-                    if (lineArr.length < 2 || "".equals(lineArr[0])) {
-                        throw new IllegalArgumentException("Error");
+                    if (lineArr.length < 2 || lineArr[0].isBlank()) {
+                        throw new IllegalArgumentException(line + " Error");
                     }
-                    values.put(lineArr[0], lineArr[1]);
+                    if (lineArr.length == 2) {
+                        values.put(lineArr[0], lineArr[1]);
+                    }
+                    if (lineArr.length == 2 && "=".equals(line.substring(line.length() - 1))) {
+                        values.put(lineArr[0], lineArr[1] + "=1");
+                    }
+                    if (lineArr.length == 3) {
+                        values.put(lineArr[0], lineArr[1] + "=" + lineArr[2]);
+                    }
                 }
             }
         } catch (IOException e) {
@@ -55,8 +62,6 @@ public class Config {
         Config a = new Config("data/app.properties");
         a.load();
         System.out.println(a.value("hibernate.connection.driver_class"));
-
-        //System.out.println(new Config("data/app.properties"));
     }
 
 }
