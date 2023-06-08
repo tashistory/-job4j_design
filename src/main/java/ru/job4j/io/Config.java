@@ -25,8 +25,7 @@ public class Config {
                         throw new IllegalArgumentException(String.format("%s Error", line));
                     }
                     String[] lineArr = line.split("=", 2);
-                    String value = lineArr[1].contains("=") && lineArr[1].indexOf("=") == lineArr[1].length() - 1 ? lineArr[1] + 1 : lineArr[1];
-                    values.put(lineArr[0], value);
+                    values.put(lineArr[0], lineArr[1]);
                 }
             }
         } catch (IOException e) {

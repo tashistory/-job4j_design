@@ -24,7 +24,7 @@ class ConfigTest {
         String path = "./data/dubl_value_without_second_value.properties";
         Config config = new Config(path);
         config.load();
-        assertThat(config.value("hibernate.connection.username")).isEqualTo("postgres=1");
+        assertThat(config.value("hibernate.connection.username")).isEqualTo("postgres=");
     }
     @Test
     void whenKeyWithoutValue() {
