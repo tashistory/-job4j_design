@@ -8,16 +8,13 @@ public class Analysis {
              PrintWriter out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(target)))) {
             boolean flag = false;
             for (String line = read.readLine(); line != null; line = read.readLine()) {
-                if (line.startsWith("400") || line.startsWith("500")) {
-                    if (!flag) {
-                        out.printf("%s;", line.split(" ")[1]);
-                        flag = true;
-                    }
-                } else {
+                if (((line.startsWith("400") || line.startsWith("500")) && !flag)
+                        || ((line.startsWith("200") || line.startsWith("300")) && flag)) {
+                    out.printf("%s;", line.split(" ")[1]);
                     if (flag) {
-                        out.printf("%s;%s", line.split(" ")[1], System.lineSeparator());
-                        flag = false;
+                        out.println();
                     }
+                    flag = !flag;
                 }
             }
         } catch (IOException e) {
