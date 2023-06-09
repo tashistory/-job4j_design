@@ -9,11 +9,11 @@ public class Analysis {
             boolean k = false;
             for (String line = read.readLine(); line != null; line = read.readLine()) {
                 if ((line.startsWith("400") || line.startsWith("500")) && !k) {
-                    out.print(line.split(" ")[1] + ";");
+                    out.printf("%s;", line.split(" ")[1]);
                     k = true;
                 }
                 if ((line.startsWith("200") || line.startsWith("300")) && k) {
-                    out.print(line.split(" ")[1] + ";" + System.lineSeparator());
+                    out.printf("%s;%s", line.split(" ")[1], System.lineSeparator());
                     k = false;
                 }
             }
