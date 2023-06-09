@@ -1,39 +1,27 @@
 package ru.job4j.io;
 
 import java.io.*;
-import java.util.*;
 
 public class Analysis {
     public void unavailable(String source, String target) {
-
-        StringJoiner out = new StringJoiner("");
-        List<String>  arr = new ArrayList<>();
-        try (BufferedReader read = new BufferedReader(new FileReader(source))) {
-            read.lines().forEach(arr::add);
-            int k = 0;
-            for (int i = 0; i < arr.size() - 1; i++) {
-               if (arr.get(i).contains("400") ||  arr.get(i).contains("500")) {
-                   k++;
-                   if (k == 1) {
-                       out.add(arr.get(i).split(" ")[1]);
-                   }
-                   if (arr.get(i + 1).contains("200") ||  arr.get(i + 1).contains("300")) {
-                       out.add(";" + arr.get(i + 1).split(" ")[1] + ";" + System.lineSeparator());
-                       k = 0;
-                   }
-               }
+        try (BufferedReader read = new BufferedReader(new FileReader(source));
+             PrintWriter out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(target)))) {
+            boolean k = false;
+            for (String line = read.readLine(); line != null; line = read.readLine()) {
+                if ((line.startsWith("400") || line.startsWith("500")) && !k) {
+                    out.print(line.split(" ")[1] + ";");
+                    k = true;
+                }
+                if ((line.startsWith("200") || line.startsWith("300")) && k) {
+                    out.print(line.split(" ")[1] + ";" + System.lineSeparator());
+                    k = false;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        try (FileOutputStream tar = new FileOutputStream(target)) {
-            tar.write(out.toString().getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
     }
+
     public static void main(String[] args) {
         Analysis analysis = new Analysis();
         analysis.unavailable("data/server.log", "data/target.csv");
