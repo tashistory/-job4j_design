@@ -6,9 +6,15 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class Search {
+    static void validation(String[] arg) {
+        if (arg.length < 1) {
+            throw new IllegalArgumentException("Недостаточно введённых параметров");
+        }
+    }
     public static void main(String[] args) throws IOException {
-        Path start = Paths.get(".");
-       search(start, p -> p.toFile().getName().endsWith(".js")).forEach(System.out::println);
+        validation(args);
+        Path start = Paths.get(args[0]);
+       search(start, p -> p.toFile().getName().endsWith(args[1])).forEach(System.out::println);
     }
 
     public static List<Path> search(Path root, Predicate<Path> condition) throws IOException {
