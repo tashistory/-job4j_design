@@ -10,6 +10,24 @@ public class Search {
         if (arg.length < 1) {
             throw new IllegalArgumentException("Недостаточно введённых параметров");
         }
+        if (arg[1].contains("/")
+                || arg[1].contains("\\")
+                || arg[1].contains("?")
+                || arg[1].contains("*")
+                || arg[1].contains("<")
+                || arg[1].contains(">")
+                || arg[1].contains("|")) {
+            throw new IllegalArgumentException("Имя файла не может содержать /?*<>|");
+        }
+
+        if (!arg[1].contains("/")
+                && !arg[0].contains(".")
+                && !arg[0].contains(":")
+                && !arg[0].contains("\\")
+        ) {
+            throw new IllegalArgumentException("Имя пути неверное");
+        }
+
     }
     public static void main(String[] args) throws IOException {
         validation(args);
