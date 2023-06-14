@@ -1,5 +1,6 @@
 package ru.job4j.io;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.List;
@@ -7,25 +8,19 @@ import java.util.function.Predicate;
 
 public class Search {
     static void validation(String[] arg) {
-        if (arg.length < 1) {
+        if (arg.length < 2) {
             throw new IllegalArgumentException("Недостаточно введённых параметров");
         }
-        if (arg[1].contains("/")
-                || arg[1].contains("\\")
-                || arg[1].contains("?")
-                || arg[1].contains("*")
-                || arg[1].contains("<")
-                || arg[1].contains(">")
-                || arg[1].contains("|")) {
-            throw new IllegalArgumentException("Имя файла не может содержать /?*<>|");
+        File dir = new File(arg[0]);
+        if (!dir.exists()) {
+            throw new IllegalArgumentException(String.format("Такого пути не существует \"%s\"", arg[0]));
+        }
+        if (!dir.isDirectory()) {
+            throw new IllegalArgumentException(String.format("Это не дериктория %s", dir.getAbsoluteFile()));
         }
 
-        if (!arg[1].contains("/")
-                && !arg[0].contains(".")
-                && !arg[0].contains(":")
-                && !arg[0].contains("\\")
-        ) {
-            throw new IllegalArgumentException("Имя пути неверное");
+        if (!arg[1].startsWith(".") || arg[1].length() < 2) {
+            throw new IllegalArgumentException(String.format("Расширение фала не верное \"%s\"", arg[1]));
         }
 
     }
