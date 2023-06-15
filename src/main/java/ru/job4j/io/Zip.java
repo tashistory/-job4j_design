@@ -20,12 +20,28 @@ public class Zip {
             e.printStackTrace();
         }
     }
+    private void checks(String... arg) {
+        File dir = new File(arg[0]);
+        if (!dir.exists()) {
+            throw new IllegalArgumentException(String.format("Такого пути не существует \"%s\"", arg[0]));
+        }
+        if (!dir.isDirectory()) {
+            throw new IllegalArgumentException(String.format("Это не дериктория %s", dir.getAbsoluteFile()));
+        }
+
+        if (!arg[1].startsWith(".") || arg[1].length() < 2) {
+            throw new IllegalArgumentException(String.format("Расширение фала не верное \"%s\"", arg[1]));
+        }
+        if (!arg[2].endsWith(".zip") || arg[2].length() < 5) {
+            throw new IllegalArgumentException(String.format("Имя архива не верное \"%s\"", arg[2]));
+        }
+    }
     public void getZip(String[] args)throws IOException {
         ArgsName argumets = ArgsName.of(args);
         String directory = argumets.get("d");
         String exclude = argumets.get("e");
         String output = argumets.get("o");
-        Search.validation(new String[]{directory, exclude});
+        checks(directory, exclude, output);
         Path start = Paths.get(directory);
         List<Path> path = Search.search(start, p -> !p.toFile().getName().endsWith(exclude));
         packFiles(path, new File(output));
