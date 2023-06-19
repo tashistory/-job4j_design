@@ -21,7 +21,8 @@ public class Zip {
         }
     }
     private  void checks(ArgsName args) {
-
+        String exclude = args.get("e");
+        String output = args.get("o");
         File dir = new File(args.get("d"));
         if (!dir.exists()) {
             throw new IllegalArgumentException(String.format("Такого пути не существует \"%s\"", args.get("d")));
@@ -30,10 +31,10 @@ public class Zip {
             throw new IllegalArgumentException(String.format("Это не дериктория %s", dir.getAbsoluteFile()));
         }
 
-        if (!args.get("e").startsWith(".") || args.get("e").length() < 2) {
+        if (!exclude.startsWith(".") || exclude.length() < 2) {
             throw new IllegalArgumentException(String.format("Расширение фала не верное \"%s\"", args.get("e")));
         }
-        if (!args.get("o").endsWith(".zip") || args.get("o").length() < 5) {
+        if (!output.endsWith(".zip") || output.length() < 5) {
             throw new IllegalArgumentException(String.format("Имя архива не верное \"%s\"", args.get("o")));
         }
     }
