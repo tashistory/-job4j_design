@@ -25,14 +25,10 @@ public class ConsoleChat {
         }
     }
 
-    private String getRandomPhrases(List<String> phrathers) {
-        Random random = new Random();
-        int randomIndex = random.nextInt(phrathers.size());
-        return phrathers.get(randomIndex);
-    }
-
     public void run() {
         validate(botAnswers);
+        List<String> phrases = readPhrases();
+        Random random = new Random();
         List<String> log = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         String userPhrather = in.nextLine();
@@ -46,16 +42,14 @@ public class ConsoleChat {
                 contin = true;
             }
             if (contin) {
-                String ansv = getRandomPhrases(readPhrases());
+                String ansv = phrases.get(random.nextInt(phrases.size()));
                 System.out.println(ansv);
                 log.add(ansv);
             }
             userPhrather = in.nextLine();
             log.add(userPhrather);
         }
-        in.close();
         saveLog(log);
-
     }
 
     private List<String> readPhrases() {
