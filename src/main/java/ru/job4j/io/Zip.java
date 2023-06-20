@@ -25,17 +25,17 @@ public class Zip {
         String output = args.get("o");
         File dir = new File(args.get("d"));
         if (!dir.exists()) {
-            throw new IllegalArgumentException(String.format("Такого пути не существует \"%s\"", args.get("d")));
+            throw new IllegalArgumentException(String.format("Такого пути не существует \"%s\"", dir.getName()));
         }
         if (!dir.isDirectory()) {
             throw new IllegalArgumentException(String.format("Это не дериктория %s", dir.getAbsoluteFile()));
         }
 
         if (!exclude.startsWith(".") || exclude.length() < 2) {
-            throw new IllegalArgumentException(String.format("Расширение фала не верное \"%s\"", args.get("e")));
+            throw new IllegalArgumentException(String.format("Расширение фала не верное \"%s\"", exclude));
         }
         if (!output.endsWith(".zip") || output.length() < 5) {
-            throw new IllegalArgumentException(String.format("Имя архива не верное \"%s\"", args.get("o")));
+            throw new IllegalArgumentException(String.format("Имя архива не верное \"%s\"", output));
         }
     }
 
