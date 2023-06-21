@@ -5,8 +5,8 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class CSVReader {
-    public static void handle(ArgsName argsName) {
-        String path = argsName.get("path");
+    private static void check(String path) {
+
         File file = new File(path);
         if (!file.exists()) {
             throw new IllegalArgumentException(String.format("Такого пути не существует \"%s\"", path));
@@ -15,16 +15,18 @@ public class CSVReader {
             throw new IllegalArgumentException(String.format("Это не файл %s", path));
         }
 
+    }
+
+    public static void handle(ArgsName argsName) {
+        String path = argsName.get("path");
+        check(path);
         String delimiter = argsName.get("delimiter");
         String out = argsName.get("out");
         List<String> filter = Arrays.asList(argsName.get("filter").split("\\s*,\\s*"));
         List<ArrayList<String>> arrCSV = new ArrayList();
-        List<Integer> numberClum = new ArrayList<>();
-
         try (Scanner scanner = new Scanner(Paths.get(path))) {
             while (scanner.hasNextLine()) {
                 String s = scanner.nextLine();
-
                 var scanner2 = new Scanner(new ByteArrayInputStream(s.replace("\"", "").
                         replace(System.lineSeparator(), "").getBytes())).useDelimiter(delimiter);
                 ArrayList<String> arr1 = new ArrayList<>();
@@ -37,10 +39,13 @@ public class CSVReader {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        conclusion(filter, arrCSV, delimiter, out);
+    }
 
+    private static void conclusion(List<String> filter, List<ArrayList<String>> arrCSV, String delimiter, String out) {
+        List<Integer> numberClum = new ArrayList<>();
         filter.forEach(e -> numberClum.add(arrCSV.get(0).indexOf(e)));
         List<String> outList = new ArrayList<>();
-
 
         for (ArrayList<String> el : arrCSV
         ) {
