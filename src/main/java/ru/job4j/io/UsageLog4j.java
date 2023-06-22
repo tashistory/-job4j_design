@@ -11,7 +11,7 @@ public class UsageLog4j {
         try {
             throw new Exception("Not supported code");
         } catch (Exception e) {
-            e.printStackTrace();
+            LOG.error("Exception in log example", e);
         }
     }
 }
