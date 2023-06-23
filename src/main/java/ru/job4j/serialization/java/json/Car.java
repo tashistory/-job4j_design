@@ -12,6 +12,14 @@ public class Car {
         this.number = number;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
     @Override
     public String toString() {
         return "Car{"

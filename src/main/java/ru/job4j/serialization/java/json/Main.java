@@ -14,15 +14,13 @@ public class Main {
         cars.add(new Car("BYD", "TF88980"));
         Parking parking = new Parking(cars, 68967670, "New Parking", true);
         JSONObject jsonObject = new JSONObject();
-        List<Car> myCar = new ArrayList<>(parking.getCar());
-        JSONArray jsonCars = new JSONArray(myCar);
+        JSONArray jsonCars = new JSONArray(new ArrayList<>(parking.getCar()));
         jsonObject.put("cars", jsonCars);
         jsonObject.put("itn", parking.getItn());
         jsonObject.put("name", parking.getName());
         jsonObject.put("open", parking.isOpen());
 
         System.out.println(jsonObject.toString());
-        System.out.println(jsonObject.getJSONArray("cars"));
         System.out.println(new JSONObject(parking).toString());
 
     }
