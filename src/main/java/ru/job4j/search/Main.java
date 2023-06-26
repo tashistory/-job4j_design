@@ -43,9 +43,10 @@ public class Main {
             founds.addAll(search(start, p -> p.toFile().getName().equals(argumets.get("n"))));
         }
         if ("mask".equals(argumets.get("t"))) {
-            String reg = argumets.get("n").replace("*", "/*")
-                    .replace("?", "/?").replace(".", "\\.");
-            System.out.println(reg);
+            String reg = argumets.get("n")
+                    .replace(".", "[.]")
+                    .replace("*", ".+")
+                    .replace("?", ".");
             Pattern pattern = Pattern.compile(reg);
             founds.addAll(search(start, p -> pattern.matcher(p.toFile().getName()).find()));
         }
@@ -53,7 +54,7 @@ public class Main {
             Pattern pattern = Pattern.compile(argumets.get("n"));
             founds.addAll(search(start, p -> pattern.matcher(p.toFile().getName()).find()));
         }
-       out(founds, argumets.get("o"));
+        out(founds, argumets.get("o"));
 
     }
 
