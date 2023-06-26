@@ -5,8 +5,6 @@ C:\app\semyon\product\11.2.0\client_1\wwg\admin\images\bg-earth.jpg
 C:\app\semyon\product\11.2.0\client_1\wwg\admin\images\DAccess.jpg
 C:\app\semyon\product\11.2.0\client_1\wwg\admin\images\wwcban.jpg
 C:\app\semyon\product\11.2.0\client_1\wwg\admin\images\w_128x52.jpg
-C:\eSupport\eDriver\Software\Driver\DCH\Offline\Graphic\Intel\Graphic_ROG\26.20.100.6911\14044\mfx_mft_mjpgvd_32.dll
-C:\eSupport\eDriver\Software\Driver\DCH\Offline\Graphic\Intel\Graphic_ROG\26.20.100.6911\14044\mfx_mft_mjpgvd_64.dll
 C:\eSupport\eDriver\Software\Driver\DCH\Online\Graphic\NVIDIA\Graphic_DCH_ROG\26.21.14.3102\14014\WIN32UX\GFExperience\www\bckgnd.jpg
 C:\eSupport\eDriver\Software\Driver\DCH\Online\Graphic\NVIDIA\Graphic_DCH_ROG\26.21.14.3102\14014\WIN32UX\GFExperience\www\default-cover.jpg
 C:\eSupport\eDriver\Software\Driver\DCH\Online\Graphic\NVIDIA\Graphic_DCH_ROG\26.21.14.3102\14014\WIN32UX\GFExperience\www\defaultRig.jpg
@@ -39,7 +37,6 @@ C:\Program Files\Adobe\Adobe Dreamweaver CC 2019\configuration\Content\Tutorial\
 C:\Program Files\Adobe\Adobe Dreamweaver CC 2019\configuration\Content\Tutorial\Assets\images\btnLocations_on.jpg
 C:\Program Files\Adobe\Adobe Dreamweaver CC 2019\configuration\Content\Tutorial\Assets\images\logo.jpg
 C:\Program Files\Adobe\Adobe Dreamweaver CC 2019\configuration\Content\Tutorial\Assets\images\vintage.jpg
-C:\Program Files\Adobe\Adobe Dreamweaver CC 2019\node\node-core\services\Compilers\node_modules\image-size\lib\types\jpg.js
 C:\Program Files\Adobe\Adobe Photoshop 2021\Required\CEP\extensions\com.adobe.ccx.fnft\images\empty-state\video-hero-MUSE.jpg
 C:\Program Files\Adobe\Adobe Photoshop 2021\Required\CEP\extensions\com.adobe.ccx.fnft\images\products\product-rune-LIRM.jpg
 C:\Program Files\Adobe\Adobe Photoshop 2021\Required\CEP\extensions\com.adobe.ccx.fnft\images\products\product-rune-SIMU.jpg
@@ -3666,8 +3663,6 @@ C:\Program Files (x86)\Repetier-Server\www\img\webcamdemo.jpg
 C:\Program Files (x86)\Webcam Surveyor\test.jpg
 C:\Program Files (x86)\Windows Media Player\Media Renderer\DMR_120.jpg
 C:\Program Files (x86)\Windows Media Player\Media Renderer\DMR_48.jpg
-C:\Program Files (x86)\Xilisoft\Video Converter Ultimate\skin\app_vc\profile\jpg.png
-C:\Program Files (x86)\Xilisoft\Video Converter Ultimate\skin\app_vc\profile\jpg_16.png
 C:\ProgramData\Google\Color Efex Pro 4\resource\textures\tex1.jpg
 C:\ProgramData\Google\Color Efex Pro 4\resource\textures\tex2.jpg
 C:\ProgramData\Google\Color Efex Pro 4\resource\textures\tex3.jpg
@@ -3689,7 +3684,6 @@ C:\ProgramData\NVIDIA Corporation\Downloader\latest\GFExperience\www\gfn-backgro
 C:\ProgramData\NVIDIA Corporation\Downloader\latest\GFExperience\www\nfan_qr_code.jpg
 C:\Python27\Lib\test\imghdrdata\python.jpg
 C:\Users\semyon\AppData\Local\ASUS\Armoury Crate Service\AC_FDS\TemporaryIcon\Square44x44Logo.scale-100.jpg4047267524415626549.png
-C:\Users\semyon\AppData\Local\Google\Chrome\User Data\Default\Extensions\efaidnbmnnnibpcajpcglclefindmkaj\15.1.3.49_0\browser\images\S_Pdf-to-jpg_18.svg
 C:\Users\semyon\AppData\Local\Microsoft\GraphicsCache\1\CloudGraphicsResources\Graphics\inkeffectbronze.jpg
 C:\Users\semyon\AppData\Local\Microsoft\GraphicsCache\1\CloudGraphicsResources\Graphics\inkeffectgalaxy.jpg
 C:\Users\semyon\AppData\Local\Microsoft\GraphicsCache\1\CloudGraphicsResources\Graphics\inkeffectgold.jpg
@@ -4309,15 +4303,11 @@ C:\Windows\SolidWorks\IM_20160-40500-1100-100\sldim\lang\english\html\images\col
 C:\Windows\SolidWorks\IM_20160-40500-1100-100\sldim\lang\english\html\images\footerbackground.jpg
 C:\Windows\SolidWorks\IM_20160-40500-1100-100\sldim\lang\english\html\images\navpanebackground.jpg
 C:\Windows\SolidWorks\IM_20160-40500-1100-100\sldim\SwHelpViewer\lang\logo.jpg
-C:\Windows\System32\DriverStore\FileRepository\msdk.inf_amd64_4d612e591478eb3e\mfx_mft_mjpgvd_32.dll
-C:\Windows\System32\DriverStore\FileRepository\msdk.inf_amd64_4d612e591478eb3e\mfx_mft_mjpgvd_64.dll
 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_c805045b663d7f42\NvCamera\GreenScreenBG01.jpg
 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_c805045b663d7f42\NvCamera\GreenScreenBG02.jpg
 C:\Windows\System32\DriverStore\FileRepository\nvami.inf_amd64_c805045b663d7f42\NvCamera\scratches.jpg
-C:\Windows\System32\mfx_mft_mjpgvd_64.dll
 C:\Windows\System32\oobe\info\Backgrounds\backgroundDefault.jpg
 C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\Public\wsxpacks\Account\assets\assets\images\xbox-acquisition-upsell.jpg
-C:\Windows\SysWOW64\mfx_mft_mjpgvd_32.dll
 C:\Windows\Web\4K\Wallpaper\Windows\img0_1920x1200.jpg
 C:\Windows\Web\4K\Wallpaper\Windows\img19_1920x1200.jpg
 C:\Windows\Web\Screen\img100.jpg

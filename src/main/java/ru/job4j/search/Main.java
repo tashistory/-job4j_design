@@ -44,7 +44,8 @@ public class Main {
         }
         if ("mask".equals(argumets.get("t"))) {
             String reg = argumets.get("n").replace("*", "/*")
-                    .replace("?", "/?");
+                    .replace("?", "/?").replace(".", "\\.");
+            System.out.println(reg);
             Pattern pattern = Pattern.compile(reg);
             founds.addAll(search(start, p -> pattern.matcher(p.toFile().getName()).find()));
         }
