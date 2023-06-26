@@ -49,7 +49,7 @@ public class Main {
             Pattern pattern = Pattern.compile(reg);
             search(start, p -> pattern.matcher(p.toFile().getName()).find()).forEach(out::println);
         }
-        if ("mask".equals(argumets.get("t"))) {
+        if ("regex".equals(argumets.get("t"))) {
                 Pattern pattern = Pattern.compile(argumets.get("n"));
                 search(start, p -> pattern.matcher(p.toFile().getName()).find()).forEach(out::println);
             }
