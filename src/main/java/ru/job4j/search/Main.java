@@ -7,12 +7,13 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
 public class Main {
-    private  void checks(ArgsName args) {
+    private void checks(ArgsName args) {
         String type = args.get("t");
         String output = args.get("o");
         File dir = new File(args.get("d"));
@@ -30,38 +31,47 @@ public class Main {
             throw new IllegalArgumentException(String.format("Имя архива не верное \"%s\"", output));
         }
     }
+
     public static void main(String[] args) throws IOException {
 
         ArgsName argumets = ArgsName.of(args);
         Main find = new Main();
         find.checks(argumets);
         Path start = Paths.get(argumets.get("d"));
-        try (PrintWriter out = new PrintWriter(
-                new BufferedOutputStream(
-                        new FileOutputStream(argumets.get("o"))
-                ))) {
+        List<Path> founds = new ArrayList<>();
         if ("name".equals(argumets.get("t"))) {
-            search(start, p -> p.toFile().getName().equals(argumets.get("n"))).forEach(out::println);
+            founds.addAll(search(start, p -> p.toFile().getName().equals(argumets.get("n"))));
         }
         if ("mask".equals(argumets.get("t"))) {
             String reg = argumets.get("n").replace("*", "/*")
                     .replace("?", "/?");
             Pattern pattern = Pattern.compile(reg);
-            search(start, p -> pattern.matcher(p.toFile().getName()).find()).forEach(out::println);
+            founds.addAll(search(start, p -> pattern.matcher(p.toFile().getName()).find()));
         }
         if ("regex".equals(argumets.get("t"))) {
-                Pattern pattern = Pattern.compile(argumets.get("n"));
-                search(start, p -> pattern.matcher(p.toFile().getName()).find()).forEach(out::println);
-            }
+            Pattern pattern = Pattern.compile(argumets.get("n"));
+            founds.addAll(search(start, p -> pattern.matcher(p.toFile().getName()).find()));
+        }
+       out(founds, argumets.get("o"));
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        }
+    }
+
 
     public static List<Path> search(Path root, Predicate<Path> condition) throws IOException {
         SearchFiles searcher = new SearchFiles(condition);
         Files.walkFileTree(root, searcher);
         return searcher.getPaths();
+    }
+
+    public static void out(List<Path> founds, String file) {
+
+        try (PrintWriter out = new PrintWriter(
+                new BufferedOutputStream(
+                        new FileOutputStream(file)
+                ))) {
+            founds.forEach(out::println);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
