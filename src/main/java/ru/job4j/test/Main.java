@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
       System.setProperty("webdriver.chrome.driver", "selenium\\chromedriver.exe");
         WebDriver webDriver = new ChromeDriver();
-        webDriver.get("https://ru.chabad.org/");
+        webDriver.get("https://ru.chabad.org/calendar/candlelighting_cdo/locationid/681/locationtype/1");
         System.out.println(webDriver.getPageSource());
         webDriver.quit();
     }
