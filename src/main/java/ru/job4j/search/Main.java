@@ -55,7 +55,6 @@ public class Main {
             founds.addAll(search(start, p -> pattern.matcher(p.toFile().getName()).find()));
         }
         out(founds, argumets.get("o"));
-
     }
 
 

@@ -1,0 +1,510 @@
+2023-06-27 12:51:55,751 DEBUG io.netty.util.internal.logging.InternalLoggerFactory:useSlf4JLoggerFactory:63 - Using SLF4J as the default logging framework
+2023-06-27 12:51:55,757 DEBUG io.netty.util.ResourceLeakDetector:<clinit>:129 - -Dio.netty.leakDetection.level: simple
+2023-06-27 12:51:55,758 DEBUG io.netty.util.ResourceLeakDetector:<clinit>:130 - -Dio.netty.leakDetection.targetRecords: 4
+2023-06-27 12:51:55,761 DEBUG io.netty.util.ResourceLeakDetectorFactory:newResourceLeakDetector:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@55040f2f
+2023-06-27 12:51:55,776 DEBUG io.netty.util.internal.PlatformDependent0:explicitNoUnsafeCause0:496 - -Dio.netty.noUnsafe: false
+2023-06-27 12:51:55,776 DEBUG io.netty.util.internal.PlatformDependent0:javaVersion0:1000 - Java version: 17
+2023-06-27 12:51:55,778 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:137 - sun.misc.Unsafe.theUnsafe: available
+2023-06-27 12:51:55,779 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:161 - sun.misc.Unsafe.copyMemory: available
+2023-06-27 12:51:55,779 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:193 - sun.misc.Unsafe.storeFence: available
+2023-06-27 12:51:55,780 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:236 - java.nio.Buffer.address: available
+2023-06-27 12:51:55,780 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:320 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+2023-06-27 12:51:55,781 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:385 - java.nio.Bits.unaligned: available, true
+2023-06-27 12:51:55,782 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:452 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @711f39f9
+2023-06-27 12:51:55,782 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:482 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2023-06-27 12:51:55,782 DEBUG io.netty.util.internal.PlatformDependent:unsafeUnavailabilityCause0:1159 - sun.misc.Unsafe: available
+2023-06-27 12:51:55,790 DEBUG io.netty.util.internal.PlatformDependent:estimateMaxDirectMemory:1270 - maxDirectMemory: 8552185856 bytes (maybe)
+2023-06-27 12:51:55,791 DEBUG io.netty.util.internal.PlatformDependent:tmpdir0:1289 - -Dio.netty.tmpdir: C:\Users\semyon\AppData\Local\Temp (java.io.tmpdir)
+2023-06-27 12:51:55,792 DEBUG io.netty.util.internal.PlatformDependent:bitMode0:1368 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2023-06-27 12:51:55,792 DEBUG io.netty.util.internal.PlatformDependent:isWindows0:1119 - Platform: Windows
+2023-06-27 12:51:55,793 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:178 - -Dio.netty.maxDirectMemory: -1 bytes
+2023-06-27 12:51:55,793 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2023-06-27 12:51:55,793 DEBUG io.netty.util.internal.CleanerJava9:<clinit>:71 - java.nio.ByteBuffer.cleaner(): available
+2023-06-27 12:51:55,794 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:205 - -Dio.netty.noPreferDirect: false
+2023-06-27 12:51:55,799 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:1010 - org.jctools-core.MpscChunkedArrayQueue: available
+2023-06-27 12:51:55,815 DEBUG io.netty.util.internal.InternalThreadLocalMap:<clinit>:100 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2023-06-27 12:51:55,815 DEBUG io.netty.util.internal.InternalThreadLocalMap:<clinit>:101 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2023-06-27 12:51:56,036 DEBUG io.netty.handler.ssl.JdkSslContext:<clinit>:83 - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2023-06-27 12:51:56,036 DEBUG io.netty.handler.ssl.JdkSslContext:<clinit>:84 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2023-06-27 12:51:56,047 DEBUG io.netty.util.concurrent.GlobalEventExecutor:<clinit>:53 - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+2023-06-27 12:51:56,056 DEBUG io.netty.channel.MultithreadEventLoopGroup:<clinit>:44 - -Dio.netty.eventLoopThreads: 24
+2023-06-27 12:51:56,064 DEBUG io.netty.channel.nio.NioEventLoop:<clinit>:110 - -Dio.netty.noKeySetOptimization: false
+2023-06-27 12:51:56,064 DEBUG io.netty.channel.nio.NioEventLoop:<clinit>:111 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2023-06-27 12:51:56,109 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:157 - -Dio.netty.allocator.numHeapArenas: 24
+2023-06-27 12:51:56,109 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:158 - -Dio.netty.allocator.numDirectArenas: 24
+2023-06-27 12:51:56,109 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:160 - -Dio.netty.allocator.pageSize: 8192
+2023-06-27 12:51:56,109 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:165 - -Dio.netty.allocator.maxOrder: 9
+2023-06-27 12:51:56,109 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:169 - -Dio.netty.allocator.chunkSize: 4194304
+2023-06-27 12:51:56,110 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:170 - -Dio.netty.allocator.smallCacheSize: 256
+2023-06-27 12:51:56,110 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:171 - -Dio.netty.allocator.normalCacheSize: 64
+2023-06-27 12:51:56,110 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2023-06-27 12:51:56,110 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2023-06-27 12:51:56,110 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2023-06-27 12:51:56,110 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:175 - -Dio.netty.allocator.useCacheForAllThreads: false
+2023-06-27 12:51:56,110 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2023-06-27 12:51:56,117 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:88 - -Dio.netty.allocator.type: pooled
+2023-06-27 12:51:56,117 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:97 - -Dio.netty.threadLocalDirectBufferSize: 0
+2023-06-27 12:51:56,118 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:100 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2023-06-27 12:51:56,357 DEBUG io.netty.channel.DefaultChannelId:<clinit>:79 - -Dio.netty.processId: 27064 (auto-detected)
+2023-06-27 12:51:56,358 DEBUG io.netty.util.NetUtil:<clinit>:148 - -Djava.net.preferIPv4Stack: false
+2023-06-27 12:51:56,358 DEBUG io.netty.util.NetUtil:<clinit>:149 - -Djava.net.preferIPv6Addresses: false
+2023-06-27 12:51:56,367 DEBUG io.netty.util.NetUtilInitializations:determineLoopback:145 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2023-06-27 12:51:56,367 DEBUG io.netty.util.NetUtil:run:206 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2023-06-27 12:51:56,394 DEBUG io.netty.channel.DefaultChannelId:<clinit>:101 - -Dio.netty.machineId: 04:d4:c4:ff:fe:e4:d7:df (auto-detected)
+2023-06-27 12:51:56,446 DEBUG io.netty.buffer.AbstractByteBuf:<clinit>:63 - -Dio.netty.buffer.checkAccessible: true
+2023-06-27 12:51:56,447 DEBUG io.netty.buffer.AbstractByteBuf:<clinit>:64 - -Dio.netty.buffer.checkBounds: true
+2023-06-27 12:51:56,447 DEBUG io.netty.util.ResourceLeakDetectorFactory:newResourceLeakDetector:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@813aef3
+2023-06-27 12:51:56,467 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0x7f038d01, L:/127.0.0.1:62441 - R:localhost/127.0.0.1:43001]' for 'POST' to '/session'
+2023-06-27 12:51:56,477 DEBUG io.netty.util.Recycler:<clinit>:96 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2023-06-27 12:51:56,477 DEBUG io.netty.util.Recycler:<clinit>:97 - -Dio.netty.recycler.ratio: 8
+2023-06-27 12:51:56,478 DEBUG io.netty.util.Recycler:<clinit>:98 - -Dio.netty.recycler.chunkSize: 32
+2023-06-27 12:51:56,478 DEBUG io.netty.util.Recycler:<clinit>:99 - -Dio.netty.recycler.blocking: false
+2023-06-27 12:51:56,478 DEBUG io.netty.util.Recycler:<clinit>:100 - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+2023-06-27 12:51:57,601 DEBUG io.netty.handler.codec.compression.Brotli:<clinit>:38 - brotli4j not in the classpath; Brotli support will be unavailable.
+2023-06-27 12:51:57,602 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Length: 254
+Content-Type: application/json; charset=utf-8
+host: localhost:43001
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 862
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:51:57,606 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:43001 for channel [id: 0x7f038d01, L:/127.0.0.1:62441 - R:localhost/127.0.0.1:43001]
+2023-06-27 12:51:57,676 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0x16f55ae3, L:/127.0.0.1:62459 - R:localhost/127.0.0.1:62445]' for 'GET' to '/json/version'
+2023-06-27 12:51:57,678 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /json/version HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+host: localhost:62445
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Security-Policy: frame-ancestors 'none'
+Content-Length: 424
+Content-Type: application/json; charset=UTF-8
+
+2023-06-27 12:51:57,678 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:62445 for channel [id: 0x16f55ae3, L:/127.0.0.1:62459 - R:localhost/127.0.0.1:62445]
+2023-06-27 12:51:57,685 DEBUG io.netty.util.internal.ThreadLocalRandom:newSeed:214 - -Dio.netty.initialSeedUniquifier: 0xbeda754e300b86af
+2023-06-27 12:51:57,688 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0x30dacf12, L:/127.0.0.1:62460 - R:localhost/127.0.0.1:62445]' for 'GET' to '/devtools/browser/f326c506-45d8-4754-85f4-743c9970665a'
+2023-06-27 12:51:57,691 DEBUG org.asynchttpclient.netty.handler.WebSocketHandler:handleRead:105 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /devtools/browser/f326c506-45d8-4754-85f4-743c9970665a HTTP/1.1
+upgrade: websocket
+connection: upgrade
+sec-websocket-key: VSQ8EfBz5/kYYM4/a+Pdjw==
+sec-websocket-version: 13
+origin: http://localhost:62445
+host: localhost:62445
+accept: */*
+user-agent: AHC/2.1
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 101 WebSocket Protocol Handshake
+Upgrade: WebSocket
+Connection: Upgrade
+Sec-WebSocket-Accept: v558BqkFqSG8ixoQggkRkD1EtQI=
+
+2023-06-27 12:51:57,719 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:pollPooledChannel:593 - Using pooled Channel '[id: 0x7f038d01, L:/127.0.0.1:62441 - R:localhost/127.0.0.1:43001]' for 'POST' to 'http://localhost:43001/session/9021e0cddc4a53d1fd02fb8a4a1b28a6/url'
+2023-06-27 12:51:57,719 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:sendRequestWithOpenChannel:251 - Using open Channel [id: 0x7f038d01, L:/127.0.0.1:62441 - R:localhost/127.0.0.1:43001] for POST '/session/9021e0cddc4a53d1fd02fb8a4a1b28a6/url'
+2023-06-27 12:51:58,203 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62445 : 1
+2023-06-27 12:51:59,305 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62445 : 1
+2023-06-27 12:52:00,403 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62445 : 1
+2023-06-27 12:52:01,504 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62445 : 1
+2023-06-27 12:52:01,898 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/9021e0cddc4a53d1fd02fb8a4a1b28a6/url HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Length: 52
+Content-Type: application/json; charset=utf-8
+host: localhost:43001
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 14
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:52:01,898 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:43001 for channel [id: 0x7f038d01, L:/127.0.0.1:62441 - R:localhost/127.0.0.1:43001]
+2023-06-27 12:54:22,604 DEBUG io.netty.util.internal.logging.InternalLoggerFactory:useSlf4JLoggerFactory:63 - Using SLF4J as the default logging framework
+2023-06-27 12:54:22,611 DEBUG io.netty.util.ResourceLeakDetector:<clinit>:129 - -Dio.netty.leakDetection.level: simple
+2023-06-27 12:54:22,611 DEBUG io.netty.util.ResourceLeakDetector:<clinit>:130 - -Dio.netty.leakDetection.targetRecords: 4
+2023-06-27 12:54:22,617 DEBUG io.netty.util.ResourceLeakDetectorFactory:newResourceLeakDetector:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@55040f2f
+2023-06-27 12:54:22,637 DEBUG io.netty.util.internal.PlatformDependent0:explicitNoUnsafeCause0:496 - -Dio.netty.noUnsafe: false
+2023-06-27 12:54:22,637 DEBUG io.netty.util.internal.PlatformDependent0:javaVersion0:1000 - Java version: 17
+2023-06-27 12:54:22,639 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:137 - sun.misc.Unsafe.theUnsafe: available
+2023-06-27 12:54:22,639 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:161 - sun.misc.Unsafe.copyMemory: available
+2023-06-27 12:54:22,640 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:193 - sun.misc.Unsafe.storeFence: available
+2023-06-27 12:54:22,641 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:236 - java.nio.Buffer.address: available
+2023-06-27 12:54:22,641 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:320 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+2023-06-27 12:54:22,642 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:385 - java.nio.Bits.unaligned: available, true
+2023-06-27 12:54:22,643 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:452 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @711f39f9
+2023-06-27 12:54:22,644 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:482 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2023-06-27 12:54:22,644 DEBUG io.netty.util.internal.PlatformDependent:unsafeUnavailabilityCause0:1159 - sun.misc.Unsafe: available
+2023-06-27 12:54:22,655 DEBUG io.netty.util.internal.PlatformDependent:estimateMaxDirectMemory:1270 - maxDirectMemory: 8552185856 bytes (maybe)
+2023-06-27 12:54:22,657 DEBUG io.netty.util.internal.PlatformDependent:tmpdir0:1289 - -Dio.netty.tmpdir: C:\Users\semyon\AppData\Local\Temp (java.io.tmpdir)
+2023-06-27 12:54:22,658 DEBUG io.netty.util.internal.PlatformDependent:bitMode0:1368 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2023-06-27 12:54:22,659 DEBUG io.netty.util.internal.PlatformDependent:isWindows0:1119 - Platform: Windows
+2023-06-27 12:54:22,660 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:178 - -Dio.netty.maxDirectMemory: -1 bytes
+2023-06-27 12:54:22,660 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2023-06-27 12:54:22,661 DEBUG io.netty.util.internal.CleanerJava9:<clinit>:71 - java.nio.ByteBuffer.cleaner(): available
+2023-06-27 12:54:22,661 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:205 - -Dio.netty.noPreferDirect: false
+2023-06-27 12:54:22,669 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:1010 - org.jctools-core.MpscChunkedArrayQueue: available
+2023-06-27 12:54:22,686 DEBUG io.netty.util.internal.InternalThreadLocalMap:<clinit>:100 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2023-06-27 12:54:22,686 DEBUG io.netty.util.internal.InternalThreadLocalMap:<clinit>:101 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2023-06-27 12:54:22,921 DEBUG io.netty.handler.ssl.JdkSslContext:<clinit>:83 - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2023-06-27 12:54:22,921 DEBUG io.netty.handler.ssl.JdkSslContext:<clinit>:84 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2023-06-27 12:54:22,931 DEBUG io.netty.util.concurrent.GlobalEventExecutor:<clinit>:53 - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+2023-06-27 12:54:22,940 DEBUG io.netty.channel.MultithreadEventLoopGroup:<clinit>:44 - -Dio.netty.eventLoopThreads: 24
+2023-06-27 12:54:22,947 DEBUG io.netty.channel.nio.NioEventLoop:<clinit>:110 - -Dio.netty.noKeySetOptimization: false
+2023-06-27 12:54:22,947 DEBUG io.netty.channel.nio.NioEventLoop:<clinit>:111 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2023-06-27 12:54:22,988 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:157 - -Dio.netty.allocator.numHeapArenas: 24
+2023-06-27 12:54:22,988 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:158 - -Dio.netty.allocator.numDirectArenas: 24
+2023-06-27 12:54:22,988 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:160 - -Dio.netty.allocator.pageSize: 8192
+2023-06-27 12:54:22,989 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:165 - -Dio.netty.allocator.maxOrder: 9
+2023-06-27 12:54:22,989 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:169 - -Dio.netty.allocator.chunkSize: 4194304
+2023-06-27 12:54:22,989 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:170 - -Dio.netty.allocator.smallCacheSize: 256
+2023-06-27 12:54:22,989 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:171 - -Dio.netty.allocator.normalCacheSize: 64
+2023-06-27 12:54:22,989 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2023-06-27 12:54:22,989 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2023-06-27 12:54:22,989 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2023-06-27 12:54:22,990 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:175 - -Dio.netty.allocator.useCacheForAllThreads: false
+2023-06-27 12:54:22,990 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2023-06-27 12:54:22,997 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:88 - -Dio.netty.allocator.type: pooled
+2023-06-27 12:54:22,998 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:97 - -Dio.netty.threadLocalDirectBufferSize: 0
+2023-06-27 12:54:22,998 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:100 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2023-06-27 12:54:23,225 DEBUG io.netty.channel.DefaultChannelId:<clinit>:79 - -Dio.netty.processId: 24064 (auto-detected)
+2023-06-27 12:54:23,226 DEBUG io.netty.util.NetUtil:<clinit>:148 - -Djava.net.preferIPv4Stack: false
+2023-06-27 12:54:23,226 DEBUG io.netty.util.NetUtil:<clinit>:149 - -Djava.net.preferIPv6Addresses: false
+2023-06-27 12:54:23,235 DEBUG io.netty.util.NetUtilInitializations:determineLoopback:145 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2023-06-27 12:54:23,236 DEBUG io.netty.util.NetUtil:run:206 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2023-06-27 12:54:23,262 DEBUG io.netty.channel.DefaultChannelId:<clinit>:101 - -Dio.netty.machineId: 04:d4:c4:ff:fe:e4:d7:df (auto-detected)
+2023-06-27 12:54:23,293 DEBUG io.netty.buffer.AbstractByteBuf:<clinit>:63 - -Dio.netty.buffer.checkAccessible: true
+2023-06-27 12:54:23,293 DEBUG io.netty.buffer.AbstractByteBuf:<clinit>:64 - -Dio.netty.buffer.checkBounds: true
+2023-06-27 12:54:23,293 DEBUG io.netty.util.ResourceLeakDetectorFactory:newResourceLeakDetector:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2e445899
+2023-06-27 12:54:23,311 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0xede9c44a, L:/127.0.0.1:62596 - R:localhost/127.0.0.1:26801]' for 'POST' to '/session'
+2023-06-27 12:54:23,322 DEBUG io.netty.util.Recycler:<clinit>:96 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2023-06-27 12:54:23,322 DEBUG io.netty.util.Recycler:<clinit>:97 - -Dio.netty.recycler.ratio: 8
+2023-06-27 12:54:23,322 DEBUG io.netty.util.Recycler:<clinit>:98 - -Dio.netty.recycler.chunkSize: 32
+2023-06-27 12:54:23,322 DEBUG io.netty.util.Recycler:<clinit>:99 - -Dio.netty.recycler.blocking: false
+2023-06-27 12:54:23,322 DEBUG io.netty.util.Recycler:<clinit>:100 - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+2023-06-27 12:54:24,439 DEBUG io.netty.handler.codec.compression.Brotli:<clinit>:38 - brotli4j not in the classpath; Brotli support will be unavailable.
+2023-06-27 12:54:24,440 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Length: 254
+Content-Type: application/json; charset=utf-8
+host: localhost:26801
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 861
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:54:24,444 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:26801 for channel [id: 0xede9c44a, L:/127.0.0.1:62596 - R:localhost/127.0.0.1:26801]
+2023-06-27 12:54:24,502 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0x5897c8d7, L:/127.0.0.1:62604 - R:localhost/127.0.0.1:62597]' for 'GET' to '/json/version'
+2023-06-27 12:54:24,504 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /json/version HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+host: localhost:62597
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Security-Policy: frame-ancestors 'none'
+Content-Length: 424
+Content-Type: application/json; charset=UTF-8
+
+2023-06-27 12:54:24,504 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:62597 for channel [id: 0x5897c8d7, L:/127.0.0.1:62604 - R:localhost/127.0.0.1:62597]
+2023-06-27 12:54:24,512 DEBUG io.netty.util.internal.ThreadLocalRandom:newSeed:214 - -Dio.netty.initialSeedUniquifier: 0xa0106fc762770235
+2023-06-27 12:54:24,515 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0x01df8dca, L:/127.0.0.1:62605 - R:localhost/127.0.0.1:62597]' for 'GET' to '/devtools/browser/f0c76a6d-f04a-4b97-9dd6-aa6ce47b4429'
+2023-06-27 12:54:24,517 DEBUG org.asynchttpclient.netty.handler.WebSocketHandler:handleRead:105 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /devtools/browser/f0c76a6d-f04a-4b97-9dd6-aa6ce47b4429 HTTP/1.1
+upgrade: websocket
+connection: upgrade
+sec-websocket-key: nOVEbgaqxEdrZCOnjIE/5w==
+sec-websocket-version: 13
+origin: http://localhost:62597
+host: localhost:62597
+accept: */*
+user-agent: AHC/2.1
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 101 WebSocket Protocol Handshake
+Upgrade: WebSocket
+Connection: Upgrade
+Sec-WebSocket-Accept: X6h7t7RqakPGX6EcXEJVOH/RPEo=
+
+2023-06-27 12:54:24,542 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:pollPooledChannel:593 - Using pooled Channel '[id: 0xede9c44a, L:/127.0.0.1:62596 - R:localhost/127.0.0.1:26801]' for 'POST' to 'http://localhost:26801/session/96c64f780ddf40b0779d8e92f1d9fe61/url'
+2023-06-27 12:54:24,542 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:sendRequestWithOpenChannel:251 - Using open Channel [id: 0xede9c44a, L:/127.0.0.1:62596 - R:localhost/127.0.0.1:26801] for POST '/session/96c64f780ddf40b0779d8e92f1d9fe61/url'
+2023-06-27 12:54:25,075 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62597 : 1
+2023-06-27 12:54:26,174 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62597 : 1
+2023-06-27 12:54:27,276 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62597 : 1
+2023-06-27 12:54:28,373 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62597 : 1
+2023-06-27 12:54:29,473 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62597 : 1
+2023-06-27 12:54:29,797 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/96c64f780ddf40b0779d8e92f1d9fe61/url HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Length: 52
+Content-Type: application/json; charset=utf-8
+host: localhost:26801
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 14
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:54:29,798 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:26801 for channel [id: 0xede9c44a, L:/127.0.0.1:62596 - R:localhost/127.0.0.1:26801]
+2023-06-27 12:54:29,800 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:pollPooledChannel:593 - Using pooled Channel '[id: 0xede9c44a, L:/127.0.0.1:62596 - R:localhost/127.0.0.1:26801]' for 'POST' to 'http://localhost:26801/session/96c64f780ddf40b0779d8e92f1d9fe61/execute/sync'
+2023-06-27 12:54:29,800 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:sendRequestWithOpenChannel:251 - Using open Channel [id: 0xede9c44a, L:/127.0.0.1:62596 - R:localhost/127.0.0.1:26801] for POST '/session/96c64f780ddf40b0779d8e92f1d9fe61/execute/sync'
+2023-06-27 12:54:29,830 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/96c64f780ddf40b0779d8e92f1d9fe61/execute/sync HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Length: 176
+Content-Type: application/json; charset=utf-8
+host: localhost:26801
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 294285
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:54:29,832 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:26801 for channel [id: 0xede9c44a, L:/127.0.0.1:62596 - R:localhost/127.0.0.1:26801]
+2023-06-27 12:58:35,720 DEBUG io.netty.util.internal.logging.InternalLoggerFactory:useSlf4JLoggerFactory:63 - Using SLF4J as the default logging framework
+2023-06-27 12:58:35,727 DEBUG io.netty.util.ResourceLeakDetector:<clinit>:129 - -Dio.netty.leakDetection.level: simple
+2023-06-27 12:58:35,727 DEBUG io.netty.util.ResourceLeakDetector:<clinit>:130 - -Dio.netty.leakDetection.targetRecords: 4
+2023-06-27 12:58:35,731 DEBUG io.netty.util.ResourceLeakDetectorFactory:newResourceLeakDetector:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@55040f2f
+2023-06-27 12:58:35,749 DEBUG io.netty.util.internal.PlatformDependent0:explicitNoUnsafeCause0:496 - -Dio.netty.noUnsafe: false
+2023-06-27 12:58:35,749 DEBUG io.netty.util.internal.PlatformDependent0:javaVersion0:1000 - Java version: 17
+2023-06-27 12:58:35,751 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:137 - sun.misc.Unsafe.theUnsafe: available
+2023-06-27 12:58:35,751 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:161 - sun.misc.Unsafe.copyMemory: available
+2023-06-27 12:58:35,751 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:193 - sun.misc.Unsafe.storeFence: available
+2023-06-27 12:58:35,752 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:236 - java.nio.Buffer.address: available
+2023-06-27 12:58:35,753 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:320 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+2023-06-27 12:58:35,754 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:385 - java.nio.Bits.unaligned: available, true
+2023-06-27 12:58:35,755 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:452 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @711f39f9
+2023-06-27 12:58:35,756 DEBUG io.netty.util.internal.PlatformDependent0:<clinit>:482 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2023-06-27 12:58:35,756 DEBUG io.netty.util.internal.PlatformDependent:unsafeUnavailabilityCause0:1159 - sun.misc.Unsafe: available
+2023-06-27 12:58:35,765 DEBUG io.netty.util.internal.PlatformDependent:estimateMaxDirectMemory:1270 - maxDirectMemory: 8552185856 bytes (maybe)
+2023-06-27 12:58:35,766 DEBUG io.netty.util.internal.PlatformDependent:tmpdir0:1289 - -Dio.netty.tmpdir: C:\Users\semyon\AppData\Local\Temp (java.io.tmpdir)
+2023-06-27 12:58:35,766 DEBUG io.netty.util.internal.PlatformDependent:bitMode0:1368 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2023-06-27 12:58:35,767 DEBUG io.netty.util.internal.PlatformDependent:isWindows0:1119 - Platform: Windows
+2023-06-27 12:58:35,768 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:178 - -Dio.netty.maxDirectMemory: -1 bytes
+2023-06-27 12:58:35,768 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2023-06-27 12:58:35,769 DEBUG io.netty.util.internal.CleanerJava9:<clinit>:71 - java.nio.ByteBuffer.cleaner(): available
+2023-06-27 12:58:35,769 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:205 - -Dio.netty.noPreferDirect: false
+2023-06-27 12:58:35,775 DEBUG io.netty.util.internal.PlatformDependent:<clinit>:1010 - org.jctools-core.MpscChunkedArrayQueue: available
+2023-06-27 12:58:35,793 DEBUG io.netty.util.internal.InternalThreadLocalMap:<clinit>:100 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2023-06-27 12:58:35,793 DEBUG io.netty.util.internal.InternalThreadLocalMap:<clinit>:101 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2023-06-27 12:58:36,099 DEBUG io.netty.handler.ssl.JdkSslContext:<clinit>:83 - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2023-06-27 12:58:36,099 DEBUG io.netty.handler.ssl.JdkSslContext:<clinit>:84 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2023-06-27 12:58:36,111 DEBUG io.netty.util.concurrent.GlobalEventExecutor:<clinit>:53 - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+2023-06-27 12:58:36,123 DEBUG io.netty.channel.MultithreadEventLoopGroup:<clinit>:44 - -Dio.netty.eventLoopThreads: 24
+2023-06-27 12:58:36,131 DEBUG io.netty.channel.nio.NioEventLoop:<clinit>:110 - -Dio.netty.noKeySetOptimization: false
+2023-06-27 12:58:36,131 DEBUG io.netty.channel.nio.NioEventLoop:<clinit>:111 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2023-06-27 12:58:36,185 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:157 - -Dio.netty.allocator.numHeapArenas: 24
+2023-06-27 12:58:36,185 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:158 - -Dio.netty.allocator.numDirectArenas: 24
+2023-06-27 12:58:36,186 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:160 - -Dio.netty.allocator.pageSize: 8192
+2023-06-27 12:58:36,186 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:165 - -Dio.netty.allocator.maxOrder: 9
+2023-06-27 12:58:36,186 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:169 - -Dio.netty.allocator.chunkSize: 4194304
+2023-06-27 12:58:36,186 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:170 - -Dio.netty.allocator.smallCacheSize: 256
+2023-06-27 12:58:36,187 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:171 - -Dio.netty.allocator.normalCacheSize: 64
+2023-06-27 12:58:36,187 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2023-06-27 12:58:36,187 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2023-06-27 12:58:36,187 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2023-06-27 12:58:36,188 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:175 - -Dio.netty.allocator.useCacheForAllThreads: false
+2023-06-27 12:58:36,188 DEBUG io.netty.buffer.PooledByteBufAllocator:<clinit>:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2023-06-27 12:58:36,198 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:88 - -Dio.netty.allocator.type: pooled
+2023-06-27 12:58:36,198 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:97 - -Dio.netty.threadLocalDirectBufferSize: 0
+2023-06-27 12:58:36,199 DEBUG io.netty.buffer.ByteBufUtil:<clinit>:100 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2023-06-27 12:58:36,458 DEBUG io.netty.channel.DefaultChannelId:<clinit>:79 - -Dio.netty.processId: 16364 (auto-detected)
+2023-06-27 12:58:36,460 DEBUG io.netty.util.NetUtil:<clinit>:148 - -Djava.net.preferIPv4Stack: false
+2023-06-27 12:58:36,460 DEBUG io.netty.util.NetUtil:<clinit>:149 - -Djava.net.preferIPv6Addresses: false
+2023-06-27 12:58:36,470 DEBUG io.netty.util.NetUtilInitializations:determineLoopback:145 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2023-06-27 12:58:36,471 DEBUG io.netty.util.NetUtil:run:206 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2023-06-27 12:58:36,498 DEBUG io.netty.channel.DefaultChannelId:<clinit>:101 - -Dio.netty.machineId: 04:d4:c4:ff:fe:e4:d7:df (auto-detected)
+2023-06-27 12:58:36,559 DEBUG io.netty.buffer.AbstractByteBuf:<clinit>:63 - -Dio.netty.buffer.checkAccessible: true
+2023-06-27 12:58:36,559 DEBUG io.netty.buffer.AbstractByteBuf:<clinit>:64 - -Dio.netty.buffer.checkBounds: true
+2023-06-27 12:58:36,560 DEBUG io.netty.util.ResourceLeakDetectorFactory:newResourceLeakDetector:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@813aef3
+2023-06-27 12:58:36,585 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321]' for 'POST' to '/session'
+2023-06-27 12:58:36,596 DEBUG io.netty.util.Recycler:<clinit>:96 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2023-06-27 12:58:36,596 DEBUG io.netty.util.Recycler:<clinit>:97 - -Dio.netty.recycler.ratio: 8
+2023-06-27 12:58:36,596 DEBUG io.netty.util.Recycler:<clinit>:98 - -Dio.netty.recycler.chunkSize: 32
+2023-06-27 12:58:36,597 DEBUG io.netty.util.Recycler:<clinit>:99 - -Dio.netty.recycler.blocking: false
+2023-06-27 12:58:36,597 DEBUG io.netty.util.Recycler:<clinit>:100 - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+2023-06-27 12:58:37,768 DEBUG io.netty.handler.codec.compression.Brotli:<clinit>:38 - brotli4j not in the classpath; Brotli support will be unavailable.
+2023-06-27 12:58:37,769 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Length: 254
+Content-Type: application/json; charset=utf-8
+host: localhost:31321
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 860
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:58:37,774 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:31321 for channel [id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321]
+2023-06-27 12:58:37,838 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0xea8f9ddf, L:/127.0.0.1:62786 - R:localhost/127.0.0.1:62780]' for 'GET' to '/json/version'
+2023-06-27 12:58:37,843 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /json/version HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+host: localhost:62780
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Security-Policy: frame-ancestors 'none'
+Content-Length: 424
+Content-Type: application/json; charset=UTF-8
+
+2023-06-27 12:58:37,843 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:62780 for channel [id: 0xea8f9ddf, L:/127.0.0.1:62786 - R:localhost/127.0.0.1:62780]
+2023-06-27 12:58:37,852 DEBUG io.netty.util.internal.ThreadLocalRandom:newSeed:214 - -Dio.netty.initialSeedUniquifier: 0x5fedd8715c0939c0
+2023-06-27 12:58:37,855 DEBUG org.asynchttpclient.netty.channel.NettyConnectListener:writeRequest:73 - Using new Channel '[id: 0xb75d3d44, L:/127.0.0.1:62787 - R:localhost/127.0.0.1:62780]' for 'GET' to '/devtools/browser/adcbbad3-1fad-4373-aaa9-a853fccfeb3a'
+2023-06-27 12:58:37,858 DEBUG org.asynchttpclient.netty.handler.WebSocketHandler:handleRead:105 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /devtools/browser/adcbbad3-1fad-4373-aaa9-a853fccfeb3a HTTP/1.1
+upgrade: websocket
+connection: upgrade
+sec-websocket-key: eXEkpNPIw4UZ0cu4E7p9Vw==
+sec-websocket-version: 13
+origin: http://localhost:62780
+host: localhost:62780
+accept: */*
+user-agent: AHC/2.1
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 101 WebSocket Protocol Handshake
+Upgrade: WebSocket
+Connection: Upgrade
+Sec-WebSocket-Accept: s0nPOlb5HrI4az1N0UpoAC9WYx4=
+
+2023-06-27 12:58:37,885 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:pollPooledChannel:593 - Using pooled Channel '[id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321]' for 'POST' to 'http://localhost:31321/session/6a429960685117f04a99b3344a6fd038/url'
+2023-06-27 12:58:37,885 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:sendRequestWithOpenChannel:251 - Using open Channel [id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321] for POST '/session/6a429960685117f04a99b3344a6fd038/url'
+2023-06-27 12:58:38,280 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62780 : 1
+2023-06-27 12:58:39,381 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62780 : 1
+2023-06-27 12:58:40,480 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62780 : 1
+2023-06-27 12:58:41,580 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62780 : 1
+2023-06-27 12:58:42,536 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/6a429960685117f04a99b3344a6fd038/url HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Length: 52
+Content-Type: application/json; charset=utf-8
+host: localhost:31321
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 14
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:58:42,537 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:31321 for channel [id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321]
+2023-06-27 12:58:42,540 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:pollPooledChannel:593 - Using pooled Channel '[id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321]' for 'POST' to 'http://localhost:31321/session/6a429960685117f04a99b3344a6fd038/execute/sync'
+2023-06-27 12:58:42,540 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:sendRequestWithOpenChannel:251 - Using open Channel [id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321] for POST '/session/6a429960685117f04a99b3344a6fd038/execute/sync'
+2023-06-27 12:58:42,589 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/6a429960685117f04a99b3344a6fd038/execute/sync HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Length: 176
+Content-Type: application/json; charset=utf-8
+host: localhost:31321
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 294285
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:58:42,592 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:31321 for channel [id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321]
+2023-06-27 12:58:42,652 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:pollPooledChannel:593 - Using pooled Channel '[id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321]' for 'DELETE' to 'http://localhost:31321/session/6a429960685117f04a99b3344a6fd038'
+2023-06-27 12:58:42,653 DEBUG org.asynchttpclient.netty.request.NettyRequestSender:sendRequestWithOpenChannel:251 - Using open Channel [id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321] for DELETE '/session/6a429960685117f04a99b3344a6fd038'
+2023-06-27 12:58:42,654 DEBUG org.asynchttpclient.netty.handler.WebSocketHandler:channelInactive:126 - Channel Closed: [id: 0xb75d3d44, L:/127.0.0.1:62787 ! R:localhost/127.0.0.1:62780] with attribute NettyResponseFuture{currentRetry=0,
+	isDone=1,
+	isCancelled=0,
+	asyncHandler=org.asynchttpclient.ws.WebSocketUpgradeHandler@4ff7e749,
+	nettyRequest=org.asynchttpclient.netty.request.NettyRequest@750f7cc4,
+	future=java.util.concurrent.CompletableFuture@230f252d[Completed normally],
+	uri=ws://localhost:62780/devtools/browser/adcbbad3-1fad-4373-aaa9-a853fccfeb3a,
+	keepAlive=true,
+	redirectCount=0,
+	timeoutsHolder=null,
+	inAuth=0,
+	touch=1687852717866}
+2023-06-27 12:58:42,656 DEBUG org.asynchttpclient.netty.channel.ChannelManager:closeChannel:315 - Closing Channel [id: 0xb75d3d44, L:/127.0.0.1:62787 ! R:localhost/127.0.0.1:62780] 
+2023-06-27 12:58:42,679 DEBUG org.asynchttpclient.netty.handler.HttpHandler:exceptionCaught:159 - Unexpected I/O exception on channel [id: 0xea8f9ddf, L:/127.0.0.1:62786 - R:localhost/127.0.0.1:62780]
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-27 12:58:42,680 DEBUG org.asynchttpclient.netty.channel.DefaultChannelPool:run:348 - Entry count for : http://localhost:62780 : 1
+2023-06-27 12:58:42,681 DEBUG org.asynchttpclient.netty.channel.ChannelManager:closeChannel:315 - Closing Channel [id: 0xea8f9ddf, L:/127.0.0.1:62786 - R:localhost/127.0.0.1:62780] 
+2023-06-27 12:58:42,683 DEBUG org.asynchttpclient.netty.handler.HttpHandler:channelInactive:126 - Channel Closed: [id: 0xea8f9ddf, L:/127.0.0.1:62786 ! R:localhost/127.0.0.1:62780] with attribute DISCARD
+2023-06-27 12:58:42,701 DEBUG org.asynchttpclient.netty.handler.HttpHandler:handleHttpResponse:70 - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+DELETE /session/6a429960685117f04a99b3344a6fd038 HTTP/1.1
+User-Agent: selenium/4.10.0 (java windows)
+Content-Type: application/json; charset=utf-8
+host: localhost:31321
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Length: 14
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+
+2023-06-27 12:58:42,702 DEBUG org.asynchttpclient.netty.channel.ChannelManager:tryToOfferChannelToPool:270 - Adding key: http://localhost:31321 for channel [id: 0x9a381b50, L:/127.0.0.1:62779 - R:localhost/127.0.0.1:31321]
+2023-06-27 12:58:42,742 DEBUG org.asynchttpclient.netty.handler.HttpHandler:channelInactive:126 - Channel Closed: [id: 0x9a381b50, L:/127.0.0.1:62779 ! R:localhost/127.0.0.1:31321] with attribute DISCARD
