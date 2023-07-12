@@ -7,8 +7,8 @@ create table truck(
 );
 
 create table garage(
-    id _number primary key,
-	gov_number varchar(6),
+    gov_number varchar(6) primary key,
+	serial_number int,
     id_truck int references truck(id)
 );
 
