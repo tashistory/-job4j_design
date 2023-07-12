@@ -13,7 +13,7 @@ create table garage(
 );
 
 
-create driver driver(
+create table driver(
     id serial primary key,
     full_name varchar(255),
 	number_phone int
@@ -35,6 +35,6 @@ create table information_driver(
 	experience int,
 	final_mileage,
 	domicile varchar(255),
-	id int references driver(id)
+	id int references driver(id) unique
 );
 
