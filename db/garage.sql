@@ -1,5 +1,5 @@
 create table truck(
-    id serial primary key,
+    id serial primary key references truck(id_truck),
     model varchar(255),
 	mpg int,
 	fuel boolean,
@@ -9,7 +9,7 @@ create table truck(
 create table garage(
     gov_number varchar(6) primary key,
 	serial_number int,
-    id_truck int references truck(id)
+    id_truck int
 );
 
 
