@@ -1,15 +1,15 @@
-create table truck(
-    id serial primary key references truck(id_truck),
+create table trucks(
+    id serial primary key,
     model varchar(255),
 	mpg int,
 	fuel boolean,
-	carrying double precision
+	carrying double precision,
+	garage_id references truck(id)
 );
 
-create table garage(
-    gov_number varchar(6) primary key,
-	serial_number int,
-    id_truck int
+create table garages(
+   id  serial primary key,
+   name varchar(255)
 );
 
 
@@ -26,8 +26,8 @@ create table invoice(
 	initial_mileage int,
 	final_mileage,
 	load double precision,
-    id_driver int references driver(id),
-	gov_number varchar(6) references garage(gov_number)
+	id_truck int references truck(id),
+    id_driver int references driver(id)
 );
 
 create table information_driver(
