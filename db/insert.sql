@@ -5,11 +5,11 @@ insert into rules(rule_name) values ('читать');
 insert into rules(rule_name) values ('удалять');
 insert into rules(rule_name) values ('записывать');
 
-insert into latitedes(id_role, id_rule) values (5, 7);
-insert into latitedes(id_role, id_rule) values (5, 8);
-insert into latitedes(id_role, id_rule) values (5, 9);
-insert into latitedes(id_role, id_rule) values (6, 7);
-insert into latitedes(id_role, id_rule) values (6, 9);
+insert into roles_rules(id_role, id_rule) values (5, 7);
+insert into roles_rules(id_role, id_rule) values (5, 8);
+insert into roles_rules(id_role, id_rule) values (5, 9);
+insert into roles_rules(id_role, id_rule) values (6, 7);
+insert into roles_rules(id_role, id_rule) values (6, 9);
 
 insert into users(user_name, id_role) values ('Иван', 5);
 insert into users(user_name, id_role) values ('Нина', 6);

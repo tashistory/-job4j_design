@@ -15,21 +15,20 @@ create table users(
 	user_name varchar(255),
 	id_role int references roles(id)
 );
-create table latitedes(
-	id serial primary key,
-	id_role int references roles(id),
-	id_rule int references rules(id)
+create table roles_rules(
+	id_role int references roles(id) NOT NULL,
+	id_rule int references rules(id) NOT NULL
 );
 create table categories(
 	id serial primary key,
-	catigorie_name varchar(255),
+	catigorie_name varchar(255)
 );
 create table items(
 	id serial primary key,
 	item_name varchar(255),
 	description text,
 	id_user int references users(id),
-	id_categori int references categories(id)
+	id_categori int references categories(id),
 	id_state int references states(id)
 );
 create table coments(
