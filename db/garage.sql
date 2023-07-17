@@ -4,7 +4,7 @@ create table trucks(
 	mpg int,
 	fuel boolean,
 	carrying double precision,
-	garage_id references truck(id)
+	garage_id references garages(id)
 );
 
 create table garages(
