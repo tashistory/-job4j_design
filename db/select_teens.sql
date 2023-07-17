@@ -1,0 +1,1 @@
+select l.name, l.gender, r.name, r.gender from teens l cross join teens r 
