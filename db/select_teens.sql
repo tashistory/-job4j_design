@@ -1,1 +1,1 @@
-select l.name, l.gender, r.name, r.gender from teens l cross join teens r 
+select l.name, r.name from teens l cross join teens r where l.gender <> r.gender and r.gender = true;
