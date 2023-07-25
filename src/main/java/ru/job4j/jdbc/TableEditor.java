@@ -28,35 +28,30 @@ public class TableEditor implements AutoCloseable {
         connection = DriverManager.getConnection(url, login, password);
     }
 
-    public void createTable(String tableName) throws Exception {
+    private void initAction(String command) throws SQLException {
         try (var statement = connection.createStatement()) {
-            statement.execute(String.format("CREATE TABLE IF NOT EXISTS %s ()", tableName));
+            statement.execute(String.format(command));
         }
+    }
+
+    public void createTable(String tableName) throws Exception {
+        initAction(String.format("CREATE TABLE IF NOT EXISTS %s ()", tableName));
     }
 
     public void dropTable(String tableName) throws Exception {
-        try (var statement = connection.createStatement()) {
-            statement.execute(String.format("DROP TABLE %s", tableName));
-        }
+        initAction(String.format("DROP TABLE %s", tableName));
     }
 
     public void addColumn(String tableName, String columnName, String type) throws Exception {
-        try (var statement = connection.createStatement()) {
-            statement.execute(String.format("ALTER TABLE %s ADD COLUMN  %s %s", tableName, columnName, type));
-        }
-
+        initAction(String.format("ALTER TABLE %s ADD COLUMN  %s %s", tableName, columnName, type));
     }
 
     public void dropColumn(String tableName, String columnName) throws Exception {
-        try (var statement = connection.createStatement()) {
-            statement.execute(String.format("ALTER TABLE %s DROP COLUMN %s", tableName, columnName));
-        }
+        initAction(String.format("ALTER TABLE %s DROP COLUMN %s", tableName, columnName));
     }
 
     public void renameColumn(String tableName, String columnName, String newColumnName) throws Exception {
-        try (var statement = connection.createStatement()) {
-            statement.execute(String.format("ALTER TABLE %s RENAME COLUMN %s TO %s", tableName, columnName, newColumnName));
-        }
+        initAction(String.format("ALTER TABLE %s RENAME COLUMN %s TO %s", tableName, columnName, newColumnName));
     }
 
 
