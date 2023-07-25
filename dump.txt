@@ -1,0 +1,9 @@
+name1;name1@mail.lan
+name2;name2@mail.lan
+name3;name3@mail.lan
+name4;name4@mail.lan
+name5;name5@mail.lan
+name6;name6@mail.lan
+name7;name7@mail.lan
+name8;name8@mail.lan
+name9;name9@mail.lan
