@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class GreetingGeneratorTest {
     @Test
-    public void WhenNoKeysInTemplate() {
+    public void whenNotKeysInTemplate() {
       Map<String, String> key = new HashMap<>();
       key.put("name", "Sasha");
       key.put("subject", "you");
@@ -23,7 +23,7 @@ class GreetingGeneratorTest {
   }
 
     @Test
-    public void WhenExtraKeysInMap() {
+    public void whenExtraKeysInMap() {
         Map<String, String> key = new HashMap<>();
         key.put("name", "Sasha");
         key.put("subject", "you");
