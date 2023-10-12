@@ -68,11 +68,11 @@ public class ReportXML implements Report {
         MemStore store = new MemStore();
         Calendar now = Calendar.getInstance();
         Employee worker = new Employee("Ivan", now, now, 100);
-        //Employee worker2 = new Employee("Stepan", now, now, 90);
-       // Employee worker3 = new Employee("Alex", now, now, 120);
+        Employee worker2 = new Employee("Stepan", now, now, 90);
+        Employee worker3 = new Employee("Alex", now, now, 120);
         store.add(worker);
-        //store.add(worker2);
-        //store.add(worker3);
+        store.add(worker2);
+        store.add(worker3);
         Report engine = new ReportXML(store, JAXBContext.newInstance(ReportXML.Employees.class));
         System.out.println(engine.generate(em -> true));
 
