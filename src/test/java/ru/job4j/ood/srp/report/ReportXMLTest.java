@@ -29,7 +29,7 @@ class ReportXMLTest {
         StringBuilder expect = new StringBuilder()
                 .append("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>")
                 .append("<employees>");
-        for (Employee em : store.findBy(sr -> true)){
+        for (Employee em : store.findBy(sr -> true)) {
             expect.append("<employee>")
                     .append("<fired>").append(dateTimeParser.parse(em.getFired())).append("</fired>")
                     .append("<hired>").append(dateTimeParser.parse(em.getHired())).append("</hired>")
