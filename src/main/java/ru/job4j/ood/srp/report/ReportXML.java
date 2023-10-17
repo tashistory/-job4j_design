@@ -53,11 +53,11 @@ public class ReportXML implements Report {
         private String fired;
         private double salary;
 
-        public XMLEmployee(String name, String hired, String fired, double salary) {
-            this.name = name;
-            this.hired = hired;
-            this.fired = fired;
-            this.salary = salary;
+        public XMLEmployee(Employee employee, DateTimeParser<Calendar> dateTimeParser) {
+            this.name = employee.getName();
+            this.hired = dateTimeParser.parse(employee.getHired());
+            this.fired = dateTimeParser.parse(employee.getFired());
+            this.salary = employee.getSalary();
         }
 
         public String getName() {
@@ -91,13 +91,14 @@ public class ReportXML implements Report {
         public void setSalary(double salary) {
             this.salary = salary;
         }
+
     }
 
     @Override
     public String generate(Predicate<Employee> filter) throws JAXBException {
         List<XMLEmployee> xmlEmployees = new ArrayList<>();
         for (Employee emp : store.findBy(filter)) {
-            xmlEmployees.add(new XMLEmployee(emp.getName(), dateTimeParser.parse(emp.getHired()), dateTimeParser.parse(emp.getFired()), emp.getSalary()));
+            xmlEmployees.add(new XMLEmployee(emp, dateTimeParser));
         }
         Employees employees = new Employees(xmlEmployees);
         Marshaller marshaller = context.createMarshaller();
