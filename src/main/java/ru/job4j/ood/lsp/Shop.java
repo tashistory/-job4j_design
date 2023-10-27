@@ -2,29 +2,22 @@ package ru.job4j.ood.lsp;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
 
 public class Shop extends AbstractStore  {
-    private final List<Food> items = new ArrayList<>();
-    private int ids = 1;
-    private int size = 0;
-
-
-
 
     @Override
-    public Food add(Food item) {
-        long shelfLifePercentage = item.getShelfLifePercentage();
+    public Food add(Food item, Date date) {
 
-        if (shelfLifePercentage >= 25 && shelfLifePercentage < 100) {
-            if (shelfLifePercentage > 75) {
-                item.setDiscount(20);
+        LifePercentage lifePercentage = new LifePercentage();
+        long shelfLifePercentage = lifePercentage.get(item, date);
+
+        if (shelfLifePercentage >= MINPROCENT && shelfLifePercentage < FULPROCENT) {
+            if (shelfLifePercentage > MAXPROCENT) {
+                item.setDiscount(DISCONTPROCENT);
             }
-            System.out.println(shelfLifePercentage);
             item.setId(ids++);
             items.add(item);
-            System.out.println(items.get(0));
         }
         return item;
     }
@@ -33,7 +26,11 @@ public class Shop extends AbstractStore  {
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         Food apple = new Food("apple", sdf.parse("06/24/2024"), sdf.parse("06/24/2023"), 23.33);
         Store shop = new Shop();
-        shop.add(apple);
+        Store warehouse = new Warehouse();
+        Store trash = new Trash();
+        //shop.add(apple);
         System.out.println(shop.findAll());
+        System.out.println(warehouse.findAll());
+        System.out.println(trash.findAll());
     }
 }

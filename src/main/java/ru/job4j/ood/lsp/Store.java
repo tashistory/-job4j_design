@@ -1,10 +1,9 @@
 package ru.job4j.ood.lsp;
-
-
+import java.util.Date;
 import java.util.List;
 
 public interface Store {
-    Food add(Food item);
+    Food add(Food item, Date date);
 
     boolean replace(int id, Food item);
 

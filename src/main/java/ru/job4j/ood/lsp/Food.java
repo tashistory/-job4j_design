@@ -17,9 +17,7 @@ public class Food {
         this.price = price;
     }
 
-    public long getShelfLifePercentage() {
-        return (new java.util.Date().getTime() - createDate.getTime()) * 100 / (expiryDate.getTime() - createDate.getTime());
-    }
+
 
 
     public int getId() {

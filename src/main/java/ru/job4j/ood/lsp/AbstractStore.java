@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractStore implements Store {
-    private List<Food> items = new ArrayList<>();
-    private int ids = 1;
-    private int size = 0;
-
+    protected List<Food> items = new ArrayList<>();
+    protected int ids = 1;
+    protected int size = 0;
+    static final int MINPROCENT = 25;
+    static final int MAXPROCENT = 75;
+    static final int FULPROCENT = 100;
+    static final int DISCONTPROCENT = 20;
 
     private int indexOf(int id) {
         int rsl = -1;
@@ -19,8 +22,6 @@ public abstract class AbstractStore implements Store {
         }
         return rsl;
     }
-    public abstract Food add(Food item);
-
 
     @Override
     public Food findById(int id) {

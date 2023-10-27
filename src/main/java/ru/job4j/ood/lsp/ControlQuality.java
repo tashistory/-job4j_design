@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 public class ControlQuality {
@@ -13,8 +14,8 @@ public class ControlQuality {
         this.stores = stores;
     }
 
-    public void saveGoods(Food food) {
-       stores.forEach(s -> s.add(food));
+    public void saveGoods(Food food, Date date) {
+       stores.forEach(s -> s.add(food, date));
     }
 
     public static void main(String[] args) throws ParseException {
@@ -24,9 +25,8 @@ public class ControlQuality {
         Store shop = new Shop();
         Store trash = new Trash();
         Store warehouse = new Warehouse();
-        List stories =  new ArrayList<>(Arrays.asList(shop, trash, warehouse));
-        ControlQuality control = new ControlQuality(stories);
-        control.saveGoods(apple);
+        ControlQuality control = new ControlQuality(new ArrayList<>(Arrays.asList(shop, trash, warehouse)));
+        control.saveGoods(apple, new java.util.Date());
         System.out.println(shop.findAll());
         System.out.println(trash.findAll());
         System.out.println(warehouse.findAll());
