@@ -28,7 +28,6 @@ public class Shop extends AbstractStore  {
         Store shop = new Shop();
         Store warehouse = new Warehouse();
         Store trash = new Trash();
-        //shop.add(apple);
         System.out.println(shop.findAll());
         System.out.println(warehouse.findAll());
         System.out.println(trash.findAll());
